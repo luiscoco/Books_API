@@ -1,8 +1,9 @@
 trigger:
 - main
 
+# Modificar aquí para usar un agente autohospedado
 pool:
-  vmImage: 'windows-latest'
+  name: 'Default' # Asegúrate de que este sea el nombre de tu grupo de agentes autohospedados
 
 variables:
   solution: '**/*.sln'
@@ -41,4 +42,3 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-
